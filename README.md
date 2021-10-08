@@ -10,6 +10,12 @@
 
 
 ## Links
-* https://kdd.org/kdd-cup 
-
-
+* https://kdd.org/kdd-cup
+* https://archive.ics.uci.edu/ml/datasets/in-vehicle+coupon+recommendation#
+* https://ischoolonline.berkeley.edu/blog/open-data-sets/
+* https://archive.ics.uci.edu/ml/datasets.php
+* https://www.kaggle.com/datasets 
+* https://datasetsearch.research.google.com/
+* https://www.v7labs.com/blog/best-free-datasets-for-machine-learning 
+* https://data.worldbank.org/
+* https://towardsdatascience.com/9-best-places-to-find-machine-learning-datasets-dfdba8af5220
