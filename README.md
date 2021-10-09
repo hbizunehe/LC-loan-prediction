@@ -20,3 +20,4 @@
 * https://data.worldbank.org/
 * https://towardsdatascience.com/9-best-places-to-find-machine-learning-datasets-dfdba8af5220
 * https://rubikscode.net/2021/07/19/top-23-best-public-datasets-for-practicing-machine-learning/
+* https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0
