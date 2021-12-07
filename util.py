@@ -1,6 +1,7 @@
-import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.utils import resample
+from sklearn import metrics
+import pandas as pd
 
 def remove_invalid_rows(df):
   """Removing summary data and selecting records which are either 'Fully Paid' or 'Charged Off'"""
@@ -145,3 +146,25 @@ def up_sample(df, label):
   new_label = new_data.loan_status
   new_data.drop('loan_status', axis=1, inplace=True)
   return(new_data, new_label)
+
+
+def get_model_stat(model, train_data, train_label, dev_data, dev_label):
+  """Builds metrics for the given model and data"""
+  dev_f1_score, dev_accuracy_score, train_f1_score, train_accuracy_score = \
+    get_scores(clf, train_data, train_label, dev_data, dev_label)
+
+  return {'Dev F1 Score': dev_f1_score, 'Dev Accuracy Score': dev_accuracy_score,
+          'Train F1 Score': train_f1_score, 'Train Accuracy Score': train_accuracy_score}
+
+
+def get_scores(model, train_data, train_label, dev_data, dev_label):
+  """Build different score for a given model and data"""
+  dev_predict = model.predict(dev_data)
+  train_predict = model.predict(train_data)
+  
+  dev_f1_score = round(metrics.f1_score(dev_label, dev_predict), 3)
+  train_f1_score = round(metrics.f1_score(train_label, train_predict), 3)
+  dev_accuracy_score = round(metrics.accuracy_score(dev_label, dev_predict), 3)
+  train_accuracy_score = round(metrics.accuracy_score(train_label, train_predict), 3)
+  
+  return dev_f1_score, dev_accuracy_score, train_f1_score, train_accuracy_score

@@ -16,7 +16,7 @@ class Imputer:
     """Replace Nan values"""
     # hash will be used as a unique file name for the given dataset
     hash = joblib.hash(df["loan_amnt"])
-    file_name = f"{hash}.csv"
+    file_name = f"./data/imputed/{hash}.csv"
     # KNNImputer takes close to 4 hours for training data and an hour to dev data
     # So caching the result once it is comupted
     if Path(file_name).is_file():
