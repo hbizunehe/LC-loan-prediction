@@ -1,4 +1,4 @@
-## Robo-Advisor For peer-to-peer lending
+## Robo-Advisor for Peer-to-Peer Lending
 
 <div align="center">
   <img src="img/pr_curve.jpg">
@@ -17,7 +17,7 @@ To achieve that, we build a model from historical data and use it in roboadviser
 
 [Presentation Slides](https://github.com/hbizunehe/LC-loan-prediction/blob/main/Final_Presentation.pptx)
 
-### Note
+## Note
 For missing data imputation, we used KNNImputer, which takes hours to complete. To make the running process easy, we stored the output of training, dev, and test data in the `data/imputed` directory, where the program detects the presence of the file and reads it after it does hash matching.
 
 Ensure that the extra python files are present when you run the Notebook as it imports the functionalities.
